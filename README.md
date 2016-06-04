@@ -7,16 +7,18 @@ My name is Bijaya Bhandari working as a software developer.
 This is a practice program for Restful API.
 
 Technologies used:
-Java
-Javax-ws
-HTML
-CSS
-Javascript
-PostgreSQL
+Java,
+Javax-ws,
+HTML,
+CSS,
+Javascript,
+PostgreSQL,
 Tomcat8 server
 
 How to test the project?
-1. Import the project from git repository: https://github.com/bijayabha/Java-Restful
+
+1. Import the project from git repository: https://github.com/bijayabha/Java-Restful.
+
 2. Create the table named employee in postgreSQL database or any other
 CREATE TABLE public.employee
 (
@@ -28,12 +30,12 @@ CREATE TABLE public.employee
   employmenttype character varying(100)
 )
 
-3.database configuration is stored in file: employee.properties in case change is required
-2. Run the project in tomcat server afer which HTML page having all the employee record get displayed if there is any
+3.database configuration is stored in file: employee.properties in case change is required.
+4. Run the project in tomcat server afer which HTML page having all the employee record get displayed if there is any.
 
 Now, comes the web service part, 
 
-Any API client can be used to test this. for example: POSTMAN plugin from chrome. Open the POSTMAN and test the following requests for CRUD operation to employee table:
+Any API client can be used to test this. for example: POSTMAN plugin from chrome. Open the POSTMAN and test the following requests for CRUD operation to employee table.
 
 1. POST: insert employee information 
 http://localhost:8080/RESTExampleJava/rest/employees/add
