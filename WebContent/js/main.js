@@ -139,14 +139,22 @@ function deleteEmployee() {
 function renderList(data) {
 	var list = data;
 	var tableElements = '';
-	$.each(list.employee, function(index, emp) {
-		
-		tableElements += '<tr><td></td><td>' + emp.name + '</td><td>' + 
-		emp.address + '</td><td>' + emp.contactNo + '</td><td>' + 
-		emp.joinedDate + '</td><td>' + 
-		emp.employmentType+ 
+	if(data.employee.length != undefined && data.employee.length > 1){
+		$.each(list.employee, function(index, emp) {	
+			tableElements += '<tr><td></td><td>' + emp.name + '</td><td>' + 
+			emp.address + '</td><td>' + emp.contactNo + '</td><td>' + 
+			emp.joinedDate + '</td><td>' + 
+			emp.employmentType+ 
+			'</td></tr>';
+		});
+	}
+	else{
+		tableElements += '<tr><td></td><td>' + list.employee.name + '</td><td>' + 
+		list.employee.address + '</td><td>' + list.employee.contactNo + '</td><td>' + 
+		list.employee.joinedDate + '</td><td>' + 
+		list.employee.employmentType+ 
 		'</td></tr>';
-	});
+	}	
 	$('#tablesorter').append(tableElements);
 }
 
