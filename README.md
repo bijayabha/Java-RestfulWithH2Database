@@ -1,11 +1,39 @@
 # Java-Restful
 Java applicaton with restful web service
 
-This is a simple java web application with capability of Restful web services. It uses Javax.ws.rs interfaces and annotations to create RESTFUL service. Its about CRUD operations to instert, update and delete employee information which can be done via REST API client such as POSTMAN(if REST API is not implemented). 
+Hello,
+My name is Bijaya Bhandari working as a software developer.
 
-The project contains User Interface listing employee information which is accessible from http://localhost:8080/RESTExampleJava/ when you run the project. 
+This is a practice program for Restful API.
 
-This JAVA API with Restful service provides following operations including example:
+Technologies used:
+Java
+Javax-ws
+HTML
+CSS
+Javascript
+PostgreSQL
+Tomcat8 server
+
+How to test the project?
+1. Import the project from git repository: https://github.com/bijayabha/Java-Restful
+2. Create the table named employee in postgreSQL database or any other
+CREATE TABLE public.employee
+(
+  id integer NOT NULL DEFAULT,
+  name character varying(100),
+  address character varying(100),
+  contactno character varying(100),
+  joineddate character varying(100),
+  employmenttype character varying(100)
+)
+
+3.database configuration is stored in file: employee.properties in case change is required
+2. Run the project in tomcat server afer which HTML page having all the employee record get displayed if there is any
+
+Now, comes the web service part, 
+
+Any API client can be used to test this. for example: POSTMAN plugin from chrome. Open the POSTMAN and test the following requests for CRUD operation to employee table:
 
 1. POST: insert employee information 
 http://localhost:8080/RESTExampleJava/rest/employees/add
@@ -22,7 +50,7 @@ Body:
 http://localhost:8080/RESTExampleJava/rest/employees
 
 3. PUT
-http://localhost:8080/RESTExampleJava/rest/employees/3
+http://localhost:8080/RESTExampleJava/rest/employees/{id}
 
 body:
 {
@@ -34,10 +62,7 @@ body:
 }
 
 4. DELETE
-http://localhost:8080/RESTExampleJava/rest/employees/delete/6
-
-
-
+http://localhost:8080/RESTExampleJava/rest/employees/delete/{id}
 
 
 
