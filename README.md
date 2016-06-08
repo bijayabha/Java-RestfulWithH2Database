@@ -34,7 +34,7 @@ How to test the project?
 
 Now, comes the web service part, 
 
-Any API client can be used to test this. for example: POSTMAN plugin from chrome. Open the POSTMAN and test the following requests for CRUD operation to employee table.
+Any API client can be used to test this. for example: POSTMAN REST client is quite good for this. So, download it, Open it and test the following requests for CRUD operation to employee table.
 
 1. POST: insert employee information 
 http://localhost:8080/RESTExampleJava/rest/employees/add
