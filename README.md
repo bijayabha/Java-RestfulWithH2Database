@@ -57,15 +57,6 @@ Request Method: GET
 4. DELETE BY ID
 http://localhost:8080/RestDemo/app/employee/{employeeId}
 Request Method: DELETE
-Body:
-
-    {
-      "address": "juhh",
-      "contactNo": "43493853",
-      "employmentType": "part",
-      "joinedDate": "545734",
-      "name": "jhfs"
-    }
 
 For testing purpose, you can use for example: POSTMAN addon from chrome
 
