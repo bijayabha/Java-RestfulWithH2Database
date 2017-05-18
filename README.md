@@ -8,7 +8,7 @@ Java,
 maven,
 Hibernate,
 Javax.ws.rs,
-Spring boot
+Spring boot,
 PostgreSQL,
 Jetty server
 
