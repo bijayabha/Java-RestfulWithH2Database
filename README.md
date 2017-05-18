@@ -5,56 +5,58 @@ This is a practice program for Restful API.
 
 Technologies used:
 Java,
+maven,
+Hibernate,
 Javax.ws.rs,
-HTML,
-CSS,
-Javascript,
+Spring boot
 PostgreSQL,
-Tomcat8 server
+Jetty server
 
 How to test the project?
 
-1. Import the project from git repository: https://github.com/bijayabha/Java-Restful.
+1. Import the project from git repository: https://github.com/bijayabha/Java-RestfulWithPostgreSQL.
 
-2. Create the table named employee in postgreSQL database or any other database of your preference:
+2. Default properties file is application.properties where you can set your own postgresql database name. In this project its set as 'db_employee'
 
-          CREATE TABLE public.employee
-          (
-            id integer NOT NULL DEFAULT,
-            name character varying(100),
-            address character varying(100),
-            contactno character varying(100),
-            joineddate character varying(100),
-            employmenttype character varying(100)
-          )
+2. Change attribute "hbm2ddl.auto" from update -> create in hibernate.cfg.xml file located in src/main/resources so that employee table can be created on-fly when you run the application
 
-3.database configuration is stored in file: employee.properties in case change is required.
+3. do mvn-clean and mvn-install
 
-4. Run the project in tomcat server afer which HTML page having all the employee record get displayed if there is any.
+4. Run the project as java application or spring boot application
 
 Now, comes the web service part, 
 
 Any API client can be used to test this. for example: POSTMAN REST client is quite good for this. So, download it, Open it and test the following requests for CRUD operation to employee table.
 
-1. POST: insert employee information 
-http://localhost:8080/RESTExampleJava/rest/employees/add
+1. POST: insert employee information                        
+http://localhost:8080/RestDemo/app/employee
 
+Request Method: POST
 Body:
 
-    {
-      "address": "helsinki",
-      "contactNo": "485497593",
-      "employmentType": "part",
-      "joinedDate": "545734",
-      "name": "jhfs"
-    }
+   [{
+	"name": "employee1",
+	"address": "Joensuuu",
+	"phoneNumber": 4149560862
+},
+{
+	"name": "employee2",
+	"address": "Joensuuu",
+	"phoneNumber": 41450749985
+}]
 
 2. GET:
-http://localhost:8080/RESTExampleJava/rest/employees
+http://localhost:8080/RestDemo/app/employee
+Request Method: GET
 
-3. PUT
-http://localhost:8080/RESTExampleJava/rest/employees/{id}
+3. GET EMPLOYEE BY ID
+http://localhost:8080/RestDemo/app/employee/{employeeId}
+Request Method: GET
 
+
+4. DELETE BY ID
+http://localhost:8080/RestDemo/app/employee/{employeeId}
+Request Method: DELETE
 Body:
 
     {
@@ -65,8 +67,7 @@ Body:
       "name": "jhfs"
     }
 
-4. DELETE
-http://localhost:8080/RESTExampleJava/rest/employees/delete/{id}
+For testing purpose, you can use for example: POSTMAN addon from chrome
 
 
 
