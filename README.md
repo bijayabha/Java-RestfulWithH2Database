@@ -58,7 +58,6 @@ Request Method: GET
 http://localhost:8080/RestDemo/app/employee/{employeeId}
 Request Method: DELETE
 
-For testing purpose, you can use for example: POSTMAN addon from chrome
 
 
 
